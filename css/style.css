@@ -7,8 +7,8 @@ html * {
   font-family: sans-serif;
 }
 
-body {
-  /*background: linear-gradient(to right bottom, #a77, #d44);*/
+.wrap {
+  text-align: center;
 }
 
 .container {
@@ -19,23 +19,11 @@ body {
   border-radius: 50%;
   position: relative;
   transition: all .3s ease-out;
-  left: 0;
-  top: 0;
+  margin: 10px;
 }
 .container:active {
   width: 305px;
   height: 305px;
-}
-@media only screen and (min-height: 321px) {
-  .container {
-    margin-top: 20px;
-  }
-}
-@media only screen and (min-width: 301px) {
-  .container {
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 .start,
