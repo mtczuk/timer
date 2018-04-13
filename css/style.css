@@ -26,21 +26,15 @@ body {
   width: 305px;
   height: 305px;
 }
-@media only screen and (min-height: 301px) {
+@media only screen and (min-height: 321px) {
   .container {
-    margin-top: 50vh;
-    transform: translateY(-50%);
+    margin-top: 20px;
   }
 }
 @media only screen and (min-width: 301px) {
   .container {
-    margin-left: 50vw;
+    margin-left: 50%;
     transform: translateX(-50%);
-  }
-}
-@media only screen and (min-width: 301px) and (min-height: 301px) {
-  .container {
-    transform: translate(-50%, -50%);
   }
 }
 
