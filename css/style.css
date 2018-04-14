@@ -21,7 +21,8 @@ html * {
   transition: all .3s ease-out;
   margin: 10px;
 }
-.container:active {
+.container:active,
+.container.active {
   width: 305px;
   height: 305px;
 }
@@ -50,7 +51,8 @@ html * {
   transition: all .3s;
   box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 }
-.start:hover {
+.start:hover,
+.start.hover {
   transform: translate(calc(-50% - 3px), -3px);
   box-shadow: 5px 5px 3px rgba(0,0,0,.2);
   font-size: 25px;
@@ -58,7 +60,8 @@ html * {
   text-shadow: 2px 2px 2px rgba(0,0,0,.2);
   filter: contrast(110%);
 }
-.start:active {
+.start:active,
+.start.active {
   transition: all .1s;
   transform: translate(calc(-50%), -3px) rotate(3deg);
   box-shadow: 2px 2px 3px rgba(0,0,0,.2);

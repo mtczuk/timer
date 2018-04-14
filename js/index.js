@@ -17,8 +17,9 @@ function formatTime(t) {
 window.onload = function() {
   const startButton = document.querySelector(".start");
   const display = document.querySelector(".display");
+  const container = this.document.querySelector(".container");
   display.innerText = formatTime(0);
-  startButton.onclick = function() {
+  const timerHandler = function() {
     console.log("the button was clicked");
     if (startButton.hasAttribute("running")) {
       startButton.removeAttribute("running");
@@ -36,4 +37,19 @@ window.onload = function() {
       }, 10);
     }
   }
+  startButton.onclick = timerHandler;
+  document.addEventListener("keypress", function(e) {
+    if (e.which !== 13 && e.which !== 32) return;
+    timerHandler();
+    startButton.classList.add("hover");
+    setTimeout(function() {
+      startButton.classList.remove("hover");
+      startButton.classList.add("active");
+      container.classList.add("active");
+      setTimeout(function() {
+        startButton.classList.remove("active");
+        container.classList.remove("active");
+      }, 200);
+    }, 100);
+  });
 }
